@@ -16,8 +16,8 @@ export const Container = styled.div`
 
         color: white;
 
-        height: 104px;
-        width: 1368px;
+        min-height: 104px;
+        min-width: 1368px;
         
         gap: 32px;
 
