@@ -2,4 +2,18 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    > div {
+        display: flex;
+
+        width: 1122px;
+        height: 529px;
+
+        gap: 27px;
+    }
 `
+

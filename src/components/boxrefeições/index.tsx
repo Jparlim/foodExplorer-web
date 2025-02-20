@@ -1,52 +1,57 @@
 import { Container } from "./style";
-import { CiHeart } from "react-icons/ci";
-import { FiMinus } from "react-icons/fi";
-import { FaPlus } from "react-icons/fa6";
-import spaguet from "../../images/image 3.png"
-import { Pratos } from "../../utils";
+import { Ref } from "react";
+import { TiThLarge } from "react-icons/ti";
 
-export interface pratosRequest {
-    id: string
-    title: string
-    subtitle: string
-    value: number
-    categoria: string
-}
+import { Refeiç, Pratos } from "../refeições/index"
 
-export interface categoriaRequest {
-    id: string
-    categoria: string
-}
+export function BoxRefeições() {
+    // Filtra apenas os pratos da categoria "refeições"
+    const refeicoes = Pratos.filter(prato => prato.categoria === "refeições");
+    const sobremesa = Pratos.filter(prato => prato.categoria === "sobremesas");
+    const bebidas = Pratos.filter(prato => prato.categoria === "bebidas");
 
-export function Refeiç( { id, categoria, title, subtitle, value }:pratosRequest ) {
-    return (
-        <div>
-            <CiHeart/>
-
-            <img src={spaguet} alt="" />
-            <h1>{title}</h1>
-            <p>{subtitle}</p>
-            <p>{value}</p>
-        </div>
-    )
-}
-
-export function BoxRefeições( { id, categoria }:categoriaRequest ) {
     return (
         <Container>
-            <h1>{categoria}</h1>
+            <div>
+                <h1>refeições</h1>
+                {refeicoes.map((prato) => (
+                    <Refeiç 
+                        key={prato.id} 
+                        title={prato.title} 
+                        subtitle={prato.subtitle} 
+                        value={prato.value} 
+                        id={prato.id} 
+                        categoria={prato.categoria} 
+                    />
+                ))}
+            </div>
+            {/* <div>
+                <h1>sobremesas</h1>
+                {sobremesa.map((prato) => (
+                    <Refeiç 
+                        key={prato.id} 
+                        title={prato.title} 
+                        subtitle={prato.subtitle} 
+                        value={prato.value} 
+                        id={prato.id} 
+                        categoria={prato.categoria} 
+                    />
+                ))}
+            </div>
+            <div>
+                <h1>bebidas</h1>
+                {bebidas.map((prato) => (
+                    <Refeiç 
+                        key={prato.id} 
+                        title={prato.title} 
+                        subtitle={prato.subtitle} 
+                        value={prato.value} 
+                        id={prato.id} 
+                        categoria={prato.categoria} 
+                    />
+                ))}
+            </div> */}
 
-            {Pratos.map(sl => 
-                <Refeiç
-                    key={sl.id}
-                    id={sl.id}
-                    categoria={sl.categoria}
-                    title={sl.title}
-                    subtitle={sl.subtitle}
-                    value={sl.value}
-                />
-            
-            )}
         </Container>
-    )
+    );
 }
