@@ -8,9 +8,9 @@ export function Home() {
     
     return (
         <Container>
-            {/* <NavBar/>
+            <NavBar/>
 
-            <Retangle/>             */}
+            <Retangle/>            
 
             <BoxRefeições/>
 

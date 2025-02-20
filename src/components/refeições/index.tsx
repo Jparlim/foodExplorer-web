@@ -29,7 +29,7 @@ export const Pratos: pratosRequest[] = [
 export function Refeiç( { title, subtitle, value }:pratosRequest ) {
     return (
         <Container>
-            <CiHeart/>
+            <CiHeart color="white"/>
 
             <img src={spaguet} alt="" />
             <h1>{title}</h1>
@@ -43,7 +43,7 @@ export function Refeiç( { title, subtitle, value }:pratosRequest ) {
                     <FaPlus/>
                 </div>
 
-                <button type="submit"/>
+                <button type="submit">incluir</button>
             </div>
         </Container>
     )

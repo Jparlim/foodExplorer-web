@@ -12,12 +12,14 @@ export const Container = styled.div`
     border-radius: 8px;
 
     background: linear-gradient(#091E26, #00131C);
+
     > img {
         width: 632px;
         height: 406px;
 
         margin-top: -146px;
         margin-left: -60px;
+
     }
 
     > div {

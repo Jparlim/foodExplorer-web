@@ -1,7 +1,4 @@
 import { Container } from "./style";
-import { Ref } from "react";
-import { TiThLarge } from "react-icons/ti";
-
 import { Refeiç, Pratos } from "../refeições/index"
 
 export function BoxRefeições() {
@@ -12,8 +9,9 @@ export function BoxRefeições() {
 
     return (
         <Container>
+            <h1>refeições</h1>
+            
             <div>
-                <h1>refeições</h1>
                 {refeicoes.map((prato) => (
                     <Refeiç 
                         key={prato.id} 
@@ -25,8 +23,9 @@ export function BoxRefeições() {
                     />
                 ))}
             </div>
-            {/* <div>
-                <h1>sobremesas</h1>
+
+            <h1>sobremesas</h1>
+            <div>
                 {sobremesa.map((prato) => (
                     <Refeiç 
                         key={prato.id} 
@@ -38,8 +37,9 @@ export function BoxRefeições() {
                     />
                 ))}
             </div>
+            
+            <h1>bebidas</h1>
             <div>
-                <h1>bebidas</h1>
                 {bebidas.map((prato) => (
                     <Refeiç 
                         key={prato.id} 
@@ -50,8 +50,7 @@ export function BoxRefeições() {
                         categoria={prato.categoria} 
                     />
                 ))}
-            </div> */}
-
+            </div>
         </Container>
     );
 }

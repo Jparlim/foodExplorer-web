@@ -20,8 +20,6 @@ export const Container = styled.div`
     > .icon {
         width: 24px;
         height: 22px;
-
-        color: white;
     }
 
     > img {
@@ -78,12 +76,27 @@ export const Container = styled.div`
             align-items: center;
             gap: 14px;
 
-            > .icon {
-                width: 24px;
-                height: 24px;
-                flex-shrink: 0;
+            color: #ccc;
 
-                color: white;
+            > .icon {
+                display: flex;
+                width: 100px;
+                height: 32px;
+                justify-content: center;
+                align-items: center;
+                gap: 14px;
+
+                cursor: pointer;
+            }
+
+            > p {
+                color: var(--Light-Light-300, #E1E1E6);
+
+                font-family: Roboto;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 160%;
             }
         }
 
@@ -93,6 +106,38 @@ export const Container = styled.div`
             justify-content: center;
             align-items: center;
             gap: 8px;
+
+            color: #ccc;
+
+            border: none;
+            border-radius: 5px;
+            background: var(--Tints-Tomato-100, #750310);
+
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #750310;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            background-color:rgb(97, 3, 14);
+            transform: scale(0.98);
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        > .signOut {
+            width: 32px;
+            height: 32px;
+
+            margin-left: 10px;
         }
     }
 ` 
