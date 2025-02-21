@@ -10,7 +10,6 @@ export function BoxRefeições() {
     return (
         <Container>
             <h1>refeições</h1>
-            
             <div>
                 {refeicoes.map((prato) => (
                     <Refeiç 
@@ -51,6 +50,8 @@ export function BoxRefeições() {
                     />
                 ))}
             </div>
+
+            <div className="boxnextleft"/>
         </Container>
     );
 }

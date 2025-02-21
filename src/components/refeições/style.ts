@@ -10,32 +10,40 @@ export const Container = styled.div`
     background-color: #00070A;
 
     align-items: center;
-    gap: 15px;
     padding: 24px;
 
     border-radius: 8px;
     border: 1px solid var(--Dark-Dark-300, #000204);
     background: var(--Dark-Dark-200, #00070A);
 
-    > .icon {
+    position: relative;
+
+    > .CiHeart {
         width: 24px;
         height: 22px;
+
+        position: absolute;
+        left: 0;
     }
 
     > img {
         width: 176px;
         height: 176px;
+
+        padding-top: 0;
     }
 
     > h1 {
         color: var(--Light-Light-300, #E1E1E6);
-    text-align: center;
+        text-align: center;
 
-    font-family: Poppins;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 140%;
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+
+        margin-top: 15px;
+        white-space: nowrap;
     }
 
     > p {
@@ -47,6 +55,8 @@ export const Container = styled.div`
         font-style: normal;
         font-weight: 400;
         line-height: 160%;
+
+        margin-top: 15px;
     }
 
     > .value {
@@ -61,12 +71,16 @@ export const Container = styled.div`
 
         height: 52px;
         flex: 1 0 0;
+
+        margin-top: 15px;
     }
 
     > div {
         display: flex;
         align-items: center;
         gap: 16px;
+
+        margin-top: 15px;
 
         > .quantidade {
             display: flex;
