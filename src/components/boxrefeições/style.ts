@@ -21,7 +21,7 @@ export const Container = styled.div`
         line-height: 140%;
 
         margin-bottom: 23px;
-        margin-left: 80px;
+        margin-left: 0px;
     }
 
     > div {
@@ -36,14 +36,58 @@ export const Container = styled.div`
 
         position: relative;
 
-        > .boxnextright {
+        overflow: hidden;
+
+        > .boxscrollleft {
             width: 224px;
-            height: 448px;
+            height: 462px;
             flex-shrink: 0;
 
-            background: linear-gradient(90deg, rgb(0, 10, 15) 0%, #000A0F 100%);
+            background: linear-gradient( 270deg, rgba(0, 10, 15, 0.47) 0%, #000A0F 100%);
+            
+            left: 0;
 
             position: absolute;
+            z-index: 1;
+
+            display: flex;
+            align-items: center;
+
+            > .icon {
+                width: 40px;
+                height: 40px;
+                flex-shrink: 0;
+
+                margin-left: 39px;
+
+                color: #E1E1E6;
+            }
+        }
+
+        > .boxscrollright {
+            width: 224px;
+            height: 465px;
+            flex-shrink: 0;
+
+            background: linear-gradient( 90deg, rgba(0, 10, 15, 0.47) 0%, #000A0F 100%);
+
+            right: 0;
+
+            position: absolute;
+            z-index: 1;
+            
+            display: flex;
+            align-items: center;
+
+            > .icon {
+                width: 40px;
+                height: 40px;
+                flex-shrink: 0;
+
+                margin-left: 116px;
+
+                color: #E1E1E6;
+            }
         }
     }
 `

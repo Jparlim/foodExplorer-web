@@ -1,8 +1,9 @@
 import { Container } from "./style";
 import { Refeiç, Pratos } from "../refeições/index"
+import { RxCaretLeft } from "react-icons/rx";
+import { RxCaretRight } from "react-icons/rx";
 
 export function BoxRefeições() {
-    // Filtra apenas os pratos da categoria "refeições"
     const refeicoes = Pratos.filter(prato => prato.categoria === "refeições");
     const sobremesa = Pratos.filter(prato => prato.categoria === "sobremesas");
     const bebidas = Pratos.filter(prato => prato.categoria === "bebidas");
@@ -11,6 +12,7 @@ export function BoxRefeições() {
         <Container>
             <h1>refeições</h1>
             <div>
+                <div className="boxscrollleft"> <RxCaretLeft className="icon"/> </div>
                 {refeicoes.map((prato) => (
                     <Refeiç 
                         key={prato.id} 
@@ -21,6 +23,7 @@ export function BoxRefeições() {
                         categoria={prato.categoria} 
                     />
                 ))}
+                <div className="boxscrollright"> <RxCaretRight className="icon"/> </div>
             </div>
 
             <h1>sobremesas</h1>
