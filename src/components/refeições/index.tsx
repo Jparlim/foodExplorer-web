@@ -3,6 +3,7 @@ import { FiMinus } from "react-icons/fi";
 import { FaPlus } from "react-icons/fa6";
 import spaguet from "../../images/image 3.png"
 import { Container } from "./style";
+import { useState } from "react";
 
 export interface pratosRequest {
     id: string
@@ -24,15 +25,21 @@ export const Pratos: pratosRequest[] = [
     {id: "9", title: "Espresso", subtitle: "Café cremoso feito na temperatura e pressões perfeitas", value: 15.97, categoria: "bebidas"},
     {id: "10", title: "suco de maracujá", subtitle: "suco de maracujá gelado, cremoso, docinho.", value: 13.97, categoria: "bebidas"},
     {id: "11", title: "tè d´autunno", subtitle: "chá de anis, canela de limão. Sinta o outono italiano.", value: 13.97, categoria: "bebidas"},
-    {id: "7", title: "Pomo bourbon", subtitle: "maçã, whisky, canela. on the rocks", value: 79.97, categoria: "bebidas"},
+    {id: "12", title: "Pomo bourbon", subtitle: "maçã, whisky, canela. on the rocks", value: 79.97, categoria: "bebidas"},
 ]
 
 
+export function Refeiç( { id, title, subtitle, value }:pratosRequest ) {    
+    
+    const [favorito, setfavorito] = useState(false);
 
-export function Refeiç( { title, subtitle, value }:pratosRequest ) {
+    function toglefavorite() {
+        setfavorito(!favorito);
+    }
+    
     return (
         <Container>
-            <CiHeart className="icon"/>
+            <CiHeart className={`icon ${favorito ? "favorito" : ""}`} key={id} onClick={toglefavorite}/>
 
             <img src={spaguet} alt="" />
             <h1>{title}</h1>

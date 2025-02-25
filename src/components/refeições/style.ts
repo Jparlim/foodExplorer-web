@@ -27,8 +27,14 @@ export const Container = styled.div`
         top: 16px;
 
         color: white;
+        padding: px;
 
         cursor: pointer;
+        transition: all 0.5s ease;
+    }
+
+    > .icon.favorito {
+        color: red;
     }
 
     > img {
