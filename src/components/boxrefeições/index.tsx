@@ -28,6 +28,7 @@ export function BoxRefeições() {
 
             <h1>sobremesas</h1>
             <div>
+                <div className="boxscrollleft"> <RxCaretLeft className="icon"/> </div>
                 {sobremesa.map((prato) => (
                     <Refeiç 
                         key={prato.id} 
@@ -38,10 +39,12 @@ export function BoxRefeições() {
                         categoria={prato.categoria} 
                     />
                 ))}
+                <div className="boxscrollright"> <RxCaretRight className="icon"/> </div>
             </div>
             
             <h1>bebidas</h1>
             <div>
+                <div className="boxscrollleft"> <RxCaretLeft className="icon"/> </div>
                 {bebidas.map((prato) => (
                     <Refeiç 
                         key={prato.id} 
@@ -52,9 +55,8 @@ export function BoxRefeições() {
                         categoria={prato.categoria} 
                     />
                 ))}
+                <div className="boxscrollright"> <RxCaretRight className="icon"/> </div>
             </div>
-
-            <div className="boxnextleft"/>
         </Container>
     );
 }

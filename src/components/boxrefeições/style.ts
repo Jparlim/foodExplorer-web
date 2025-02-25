@@ -4,12 +4,11 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
-    margin: -130px auto;
+    margin: auto;
+    margin-top: -130px;
 
     width: 1122px;
-    height: 2400px;
-
-
+    height: auto;
     
     > h1 {
         color: var(--Light-Light-300, #E1E1E6);

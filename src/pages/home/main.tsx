@@ -4,6 +4,8 @@ import { Retangle } from "../../components/retangle/main"
 
 import { BoxRefeições } from "../../components/boxrefeições"
 
+import { Footer } from "../../components/footer/index"
+
 export function Home() {
     
     return (
@@ -13,6 +15,8 @@ export function Home() {
             <Retangle/>            
 
             <BoxRefeições/>
+
+            <Footer/>
 
         </Container>
     )

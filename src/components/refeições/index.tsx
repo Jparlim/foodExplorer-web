@@ -20,9 +20,11 @@ export const Pratos: pratosRequest[] = [
     {id: "5", title: "Prigna Pie", subtitle: "torta de ameixa com massa amanteigada, polvilho em açucar.", value: 79.97, categoria: "sobremesas"},
     {id: "6", title: "Bolo de damasco", subtitle: "Damasco fresco em uma massa sem glúten", value: 19.97, categoria: "sobremesas"},
     {id: "7", title: "Peachy pastrie", subtitle: "Delicioso folheado de pêssego com folhas de hortelã", value: 32.97, categoria: "sobremesas"},
-    {id: "8", title: "Espresso", subtitle: "Café cremoso feito na temperatura e pressões perfeitas", value: 15.97, categoria: "bebidas"},
-    {id: "9", title: "suco de maracujá", subtitle: "suco de maracujá gelado, cremoso, docinho.", value: 13.97, categoria: "bebidas"},
-    {id: "10", title: "tè d´autunno", subtitle: "chá de anis, canela de limão. Sinta o outono italiano.", value: 13.97, categoria: "bebidas"},
+    {id: "8", title: "macarrão agridoce", subtitle: "massas doces e refrescantes", value: 60.00, categoria: "sobremesas"},
+    {id: "9", title: "Espresso", subtitle: "Café cremoso feito na temperatura e pressões perfeitas", value: 15.97, categoria: "bebidas"},
+    {id: "10", title: "suco de maracujá", subtitle: "suco de maracujá gelado, cremoso, docinho.", value: 13.97, categoria: "bebidas"},
+    {id: "11", title: "tè d´autunno", subtitle: "chá de anis, canela de limão. Sinta o outono italiano.", value: 13.97, categoria: "bebidas"},
+    {id: "7", title: "Pomo bourbon", subtitle: "maçã, whisky, canela. on the rocks", value: 79.97, categoria: "bebidas"},
 ]
 
 
@@ -30,7 +32,7 @@ export const Pratos: pratosRequest[] = [
 export function Refeiç( { title, subtitle, value }:pratosRequest ) {
     return (
         <Container>
-            <CiHeart color="white"/>
+            <CiHeart className="icon"/>
 
             <img src={spaguet} alt="" />
             <h1>{title}</h1>
@@ -39,9 +41,9 @@ export function Refeiç( { title, subtitle, value }:pratosRequest ) {
 
             <div>
                 <div className="quantidade">
-                    <FiMinus/>
+                    <FiMinus className="maisEmenos"/>
                     <p>01</p>
-                    <FaPlus/>
+                    <FaPlus className="maisEmenos"/>
                 </div>
 
                 <button type="submit">incluir</button>

@@ -18,12 +18,17 @@ export const Container = styled.div`
 
     position: relative;
 
-    > .CiHeart {
+    > .icon {
         width: 24px;
         height: 22px;
 
         position: absolute;
-        left: 0;
+        right: 18px;
+        top: 16px;
+
+        color: white;
+
+        cursor: pointer;
     }
 
     > img {
@@ -76,11 +81,18 @@ export const Container = styled.div`
     }
 
     > div {
-        display: flex;
+        /* display: flex;
         align-items: center;
         gap: 16px;
 
-        margin-top: 15px;
+        margin-top: 15px; */
+
+        display: flex;
+        width: 100px;
+        height: 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
 
         > .quantidade {
             display: flex;
@@ -92,13 +104,10 @@ export const Container = styled.div`
 
             color: #ccc;
 
-            > .icon {
-                display: flex;
-                width: 100px;
-                height: 32px;
-                justify-content: center;
-                align-items: center;
-                gap: 14px;
+            > .maisEmenos {
+                width: 24px;
+                height: 24px;
+                flex-shrink: 0;
 
                 cursor: pointer;
             }
