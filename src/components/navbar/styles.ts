@@ -129,7 +129,7 @@ export const Container = styled.div`
             color: white;
 
             cursor: pointer;
-            transition: background 0.3s ease, transform 0.2s ease;
+            transition: 0.3s ease, transform 0.2s ease;
 
             > p {
                 font-weight: 500;
