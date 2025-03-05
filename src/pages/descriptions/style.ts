@@ -4,7 +4,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
-    height: 100;
+    height: 100vh;
 
     > .head {
         display: flex;
@@ -16,11 +16,9 @@ export const Container = styled.div`
 
             align-items: center;
 
-            margin: 24px 0 0 154px;
-
             position: absolute;
 
-            left: 250px;
+            left: 430px;
             top: 150px;
 
             > .icon {
@@ -46,11 +44,9 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
 
-        height: 80vh;
+        height: 100%;
 
         gap: 55px;
-
-        position: relative;
 
         > img {
             display: flex;
@@ -59,6 +55,8 @@ export const Container = styled.div`
             justify-content: center;
             align-items: center;
             flex-shrink: 0;
+
+            position: relative;
         }
 
         > .boxText {
