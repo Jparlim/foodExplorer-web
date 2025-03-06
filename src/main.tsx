@@ -5,8 +5,10 @@ import { SignUp } from './pages/signUp/index.tsx'
 import { SignIn } from "./pages/signIn"
 import { Description } from "./pages/descriptions/index.tsx"
 
+import { Refeiç } from "./components/refeições"
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Description/>
+    <Home/>
   </StrictMode>
 )
