@@ -116,6 +116,12 @@ export const Container = styled.div`
                 flex-shrink: 0;
 
                 cursor: pointer;
+
+                transition: all ease;
+            }
+            
+            > .maisEmenos:active {
+                transform: scale(0.90) ;
             }
 
             > p {

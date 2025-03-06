@@ -17,6 +17,7 @@ export function BoxRefeições() {
                     <Refeiç 
                         key={prato.id} 
                         title={prato.title} 
+                        imagem={prato.imagem}
                         subtitle={prato.subtitle} 
                         value={prato.value} 
                         id={prato.id} 
@@ -32,7 +33,8 @@ export function BoxRefeições() {
                 {sobremesa.map((prato) => (
                     <Refeiç 
                         key={prato.id} 
-                        title={prato.title} 
+                        title={prato.title}
+                        imagem={prato.imagem}
                         subtitle={prato.subtitle} 
                         value={prato.value} 
                         id={prato.id} 
@@ -49,6 +51,7 @@ export function BoxRefeições() {
                     <Refeiç 
                         key={prato.id} 
                         title={prato.title} 
+                        imagem={prato.imagem}
                         subtitle={prato.subtitle} 
                         value={prato.value} 
                         id={prato.id} 
