@@ -8,7 +8,6 @@ export const Container = styled.div`
     
     align-items: center;
     gap: 8px;
-    flex-shrink: 0;
 
     background: var(--Dark-Dark-600, #00111A);
 

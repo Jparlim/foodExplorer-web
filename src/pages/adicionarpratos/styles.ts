@@ -4,15 +4,20 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
-    > .close {
-        color: white;
-        display: flex;
+   
 
+    > button {
+        background: none;
+        border: none;
+
+        color: white;
+
+        display: flex;
         align-items: center;
 
+        color: var(--Light-Light-300, #E1E1E6);
 
-        left: 430px;
-        top: 150px;
+        margin: 40px 0 24px 123px;
 
         > .icon {
             width: 32px;
@@ -20,7 +25,7 @@ export const Container = styled.div`
             flex-shrink: 0;
         }
 
-        > h1 {
+        > p {
             color: var(--Light-Light-300, #E1E1E6);
 
             font-family: Poppins;
@@ -29,97 +34,112 @@ export const Container = styled.div`
             font-weight: 700;
             line-height: 140%;
         }
+    }
 
     > h1 {
         color: var(--Light-Light-300, #E1E1E6);
 
+        /* Poppins/400-medium */
         font-family: Poppins;
         font-size: 32px;
         font-style: normal;
         font-weight: 500;
-        line-height: 140%;
+
+        margin: 24px 0 32px 123px;
     }
 
     > .adicionar {
         display: flex;
         flex-direction: column;
 
-        gap: 32px;
+        color: white;
 
-        > .name {
-            > p {
-                color: var(--Light-Light-400, #C4C4CC);
+        margin: auto;
+        min-height: 100vh;
+        flex-grow: 1;
 
-                /* Roboto/Small regular */
-                font-family: Roboto;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 100%; /* 16px */
-            }
+        width: 1120px;
 
-            > div {
-                
-            }
-        }
-    }
-    }
+        border: 1px solid red;
 
-    > h1 {
-        color: var(--Light-Light-300, #E1E1E6);
-
-        font-family: Poppins;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 140%;
-    }
-
-    > .adicionar {
-        display: flex;
-        flex-direction: column;
-
-        gap: 32px;
+        margin: 0 123px 116px 122px;
 
         > .name {
             display: flex;
-
             gap: 32px;
 
+            
             > div {
                 display: flex;
                 flex-direction: column;
 
                 gap: 16px;
+                border: 1px solid red;
 
-                > div {
-                    display: flex;
 
-                    gap: 8px;
+                > p {
+                    color: var(--Light-Light-400, #C4C4CC);
 
-                    > input:nth-child(1) {
-                        color: var(--Light-Light-100, #FFF);
-                        text-align: center;
-
-                        font-family: Poppins;
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 24px;
-
-                        display: flex;
-                        padding: 12px 32px;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 8px;
-
-                        border-radius: 8px;
-                        background: var(--Dark-Dark-800, #0D161B);
-                    }
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 100%;
                 }
 
-                
+                > input:focus {
+                    margin: none;
+                }
             }
+
+            > div:nth-child(1) {
+                display: flex;
+                height: 80px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+
+                > .importimg {
+                    display: flex;
+                    padding: 12px 32px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+
+                    background-color: pink;
+
+                    border-radius: 8px;
+                    background: var(--Dark-Dark-800, #0D161B);
+
+                    > .icon{
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    > input {
+                        opacity: 0;
+                        width: 0px;
+                    }
+                }
+            }
+
+            > div:nth-child(2) {
+                > input {
+                    height: 48px;
+                    padding: 12px 14px;
+                    align-items: center;
+
+                    border: none;
+                    width: 435px;
+
+                    border-radius: 8px;
+                    background: var(--Dark-Dark-800, #0D161B);
+                }
+            }
+
+
         }
     }
+
+
 `

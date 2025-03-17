@@ -11,10 +11,10 @@ export function Adicionar() {
         <Container>
             <NavBar/>
 
-                <div className="close">
+                <button type="submit">
                     <RxCaretLeft className="icon"/>
-                    <h1>voltar</h1>
-                </div>
+                    <p>voltar</p>
+                </button>
 
                 <h1>adicionar prato</h1>
                 
@@ -22,10 +22,11 @@ export function Adicionar() {
                     <div className="name">
                         <div>
                             <p>imagem do prato</p>
-                            <div>
-                                <FiUpload/>
+                            <label className="importimg">
+                                <FiUpload className="icon"/>
+                                <p>selecionar imagem</p>
                                 <input type="file"/>
-                            </div>
+                            </label>
                         </div>
 
                         <div>
@@ -39,7 +40,15 @@ export function Adicionar() {
                         </div>
                     </div>
 
-                    <div className="ingredientes">
+                    
+                </div>
+
+            <Footer/>
+        </Container>
+    )
+}
+
+{/* <div className="ingredientes">
                         <div>
                             <p>ingredientes</p>
                             <input type="text" />
@@ -56,10 +65,4 @@ export function Adicionar() {
                         <input type="text" />
                     </div>
 
-                    <button type="button">salvar alteração</button>
-                </div>
-
-            <Footer/>
-        </Container>
-    )
-}
+                    <button type="button">salvar alteração</button> */}
