@@ -4,6 +4,7 @@ import { NavBar } from "../../components/navbar/main"
 import { Footer } from "../../components/footer/index"
 
 import { RxCaretLeft } from "react-icons/rx";
+import { FiUpload } from "react-icons/fi";
 
 export function Adicionar() {
     return (
@@ -21,7 +22,10 @@ export function Adicionar() {
                     <div className="name">
                         <div>
                             <p>imagem do prato</p>
-                            <input type="" placeholder="selecionar imagem"/>
+                            <div>
+                                <FiUpload/>
+                                <input type="file"/>
+                            </div>
                         </div>
 
                         <div>
@@ -31,7 +35,7 @@ export function Adicionar() {
 
                         <div>
                             <p>categoria</p>
-                            <input type="" />
+                            <input type="select" />
                         </div>
                     </div>
 
