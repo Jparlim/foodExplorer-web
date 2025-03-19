@@ -11,6 +11,7 @@ export function Adicionar() {
         <Container>
             <NavBar/>
 
+            <main>
                 <button type="submit">
                     <RxCaretLeft className="icon"/>
                     <p>voltar</p>
@@ -36,33 +37,37 @@ export function Adicionar() {
 
                         <div>
                             <p>categoria</p>
-                            <input type="select" />
+                            <select name="categoria" id="Cat01">
+                                <option value="Refeição">Refeição</option>
+                                <option value="Breakfast">Breakfast</option>
+                                <option value="Refeição">Refeição</option>
+                            </select>
                         </div>
                     </div>
+                </div>
+  
+                <div className="ingredientes">
+                    <div>
+                        <p>ingredientes</p>
+                        <input type="text" />
+                    </div>
 
-                    
+                    <div>
+                        <p>preço</p>
+                        <input type="text" placeholder="R$ 00,00"/>
+                    </div>
                 </div>
 
+                {/* <div className="descrição">
+                    <p>descrição</p>
+                    <input type="text" />
+                </div>
+
+                <button type="button">salvar alteração</button> */}
+
+            </main>
+    
             <Footer/>
         </Container>
     )
 }
-
-{/* <div className="ingredientes">
-                        <div>
-                            <p>ingredientes</p>
-                            <input type="text" />
-                        </div>
-
-                        <div>
-                            <p>preço</p>
-                            <input type="text" />
-                        </div>
-                    </div>
-
-                    <div className="descrição">
-                        <p>descrição</p>
-                        <input type="text" />
-                    </div>
-
-                    <button type="button">salvar alteração</button> */}

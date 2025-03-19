@@ -4,9 +4,21 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
+    main {
+        display: flex;
+        flex-direction: column;
+
+        margin: auto;
+        justify-content: start;
+
+        min-height: 100vh;
+        flex-grow: 1;
+
+        border: 1px solid red;
+    }
    
 
-    > button {
+    > main button {
         background: none;
         border: none;
 
@@ -36,7 +48,7 @@ export const Container = styled.div`
         }
     }
 
-    > h1 {
+    > main h1 {
         color: var(--Light-Light-300, #E1E1E6);
 
         /* Poppins/400-medium */
@@ -48,33 +60,23 @@ export const Container = styled.div`
         margin: 24px 0 32px 123px;
     }
 
-    > .adicionar {
+    > main .adicionar {
         display: flex;
         flex-direction: column;
-
         color: white;
-
-        margin: auto;
-        min-height: 100vh;
-        flex-grow: 1;
-
         width: 1120px;
 
-        border: 1px solid red;
-
-        margin: 0 123px 116px 122px;
+        margin: 0 123px 50px 122px;
 
         > .name {
             display: flex;
             gap: 32px;
-
             
             > div {
                 display: flex;
                 flex-direction: column;
 
                 gap: 16px;
-                border: 1px solid red;
 
 
                 > p {
@@ -88,16 +90,16 @@ export const Container = styled.div`
                 }
 
                 > input:focus {
-                    margin: none;
+                    outline: none;
+                    color: white;
                 }
             }
 
             > div:nth-child(1) {
-                display: flex;
                 height: 80px;
-                flex-direction: column;
-                align-items: flex-start;
                 gap: 16px;
+
+                width: 229px;
 
                 > .importimg {
                     display: flex;
@@ -106,7 +108,7 @@ export const Container = styled.div`
                     align-items: center;
                     gap: 8px;
 
-                    background-color: pink;
+                    width: 229px;
 
                     border-radius: 8px;
                     background: var(--Dark-Dark-800, #0D161B);
@@ -137,9 +139,123 @@ export const Container = styled.div`
                 }
             }
 
+            > div:nth-child(3) {
+                width: 100%;
+                /* width: 370px; */
+
+                > #Cat01 {
+                    display: flex;
+                    gap: 16px;
+
+                    height: 48px;
+                    padding: 16px;
+
+                    border-radius: 5px;
+                    background: var(--Dark-Dark-800, #0D161B);
+                    color: var(--Light-Light-400, #C4C4CC);
+                    
+
+                    border: none;
+                    outline: none;
+                }
+
+                > #Cat01 {
+
+                }
+            }
 
         }
     }
 
+    > main .ingredientes {
+        display: flex;
+        gap: 32px;
+
+        justify-content: start;
+
+        margin: 0 123px 116px 122px;
+        
+
+        > div {
+
+            > input:focus {
+                outline: none;
+                color: white;
+            }
+        }
+
+        > div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+
+            gap: 16px;
+
+            > p {
+                color: var(--Light-Light-400, #C4C4CC);
+
+                font-family: Roboto;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%;
+            }
+
+            > input {
+                width: 821px;
+                height: 48px;
+                padding: 4px 8px;
+                
+                align-items: center;
+                gap: 16px;
+                align-self: stretch;
+
+                border: none;
+                border-radius: 8px;
+                background: var(--Dark-Dark-800, #0D161B);
+            }
+
+          
+        }
+
+        > div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+
+            gap: 16px;
+            width: 100%;
+
+            > p {
+                color: var(--Light-Light-400, #C4C4CC);
+
+                font-family: Roboto;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%;
+            }
+
+            > input {
+                display: flex;
+                padding: 12px 14px;
+
+                align-items: center;
+                height: 48px;
+
+                border-radius: 8px;
+                border: none;
+                background: var(--Dark-Dark-800, #0D161B);
+            }
+
+            > input::placeholder {
+                color: var(--Light-Light-500, #7C7C8A);
+
+                font-family: Roboto;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%;
+            }
+        }
+    }
 
 `
