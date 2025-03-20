@@ -8,13 +8,11 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
 
-        margin: auto;
+        margin:  0 auto 0 ;
         justify-content: start;
 
         min-height: 100vh;
         flex-grow: 1;
-
-        border: 1px solid red;
     }
    
 
@@ -257,5 +255,83 @@ export const Container = styled.div`
             }
         }
     }
+
+    > main .descrição {
+        display: flex;
+        flex-direction: column;
+
+        width: 1120px;
+        margin: 0 123px 50px 122px;
+
+        gap: 16px;
+
+        > p {
+            color: var(--Light-Light-400, #C4C4CC);
+
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+
+            align-self: stretch;
+        }
+
+        > input {
+            align-items: flex-start;
+
+            height: 172px;
+            padding: 14px;
+
+            border-radius: 8px;
+            border: none;
+            background: var(--Dark-Dark-800, #0D161B);
+        }
+
+        > input:focus {
+            outline: none;
+            color: white;
+        }
+
+        > button {
+            display: flex;
+
+            margin: 25px 0 0 950px;
+
+            padding: 12px 24px;
+            width: 172px;
+            height: 48px;
+            
+            gap: 8px;
+
+            border-radius: 5px;
+            background: var(--Tints-Tomato-400, #AB4D55);
+
+            font-family: Poppins;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px; /* 171.429% */
+
+            transition: all ease 0.3s ;
+        }
+
+        button:hover {
+            background-color:rgb(200, 32, 51);
+            transform: scale(1.05);
+        }
+
+        button:active {
+            background-color:rgb(117, 21, 32);
+            transform: scale(0.98);
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        }
 
 `

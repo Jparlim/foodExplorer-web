@@ -58,12 +58,11 @@ export function Adicionar() {
                     </div>
                 </div>
 
-                {/* <div className="descrição">
+                <div className="descrição">
                     <p>descrição</p>
-                    <input type="text" />
+                    <input type="text" placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"/>
+                    <button type="button">salvar alteração</button>
                 </div>
-
-                <button type="button">salvar alteração</button> */}
 
             </main>
     
