@@ -48,7 +48,7 @@ export function Adicionar() {
   
                 <div className="ingredientes">
                     <div>
-                        <p>ingredientes</p>
+                        <p>ingredientes</p>_
                         <input type="text" />
                     </div>
 

@@ -278,6 +278,7 @@ export const Container = styled.div`
         }
 
         > input {
+            display: flex;
             align-items: flex-start;
 
             height: 172px;
