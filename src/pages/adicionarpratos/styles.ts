@@ -198,7 +198,7 @@ export const Container = styled.div`
                 line-height: 100%;
             }
 
-            > input {
+            > label {
                 width: 821px;
                 height: 48px;
                 padding: 4px 8px;
@@ -210,8 +210,61 @@ export const Container = styled.div`
                 border: none;
                 border-radius: 8px;
                 background: var(--Dark-Dark-800, #0D161B);
+
+                position: relative;
             }
 
+            > label #buttonON {
+                display: flex;
+                justify-content: center;
+
+                cursor: pointer;
+
+                margin:  4px auto;
+
+                background-color: #0D161B;
+
+                border: 2px dashed #7C7C8A;
+                border-radius: 8px;
+                padding: 4px 8px;
+                
+                height: 32px;
+                width: 116px;
+
+                position: absolute;
+                z-index: 1;
+
+                font-family: Roboto;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 100%;
+                letter-spacing: 0%;
+
+                color: #7C7C8A;
+            }
+
+            > label #inputOFF {
+                display: none;
+            }
+
+            > label #inputON {
+                height: 42px;
+                padding: 4px 8px;
+
+                color: white;
+                
+                align-items: center;
+                gap: 16px;
+                align-self: stretch;
+
+                border: none;
+                border-radius: 8px;
+                background: #76797B;
+            }
+
+            > label input:focus {
+                outline: none;
+            }
           
         }
 

@@ -5,8 +5,25 @@ import { Footer } from "../../components/footer/index"
 
 import { RxCaretLeft } from "react-icons/rx";
 import { FiUpload } from "react-icons/fi";
+import React, { useState } from "react";
 
 export function Adicionar() {
+
+    const [visible, setvisible] = useState(true)
+    const [inputValue, setinputValue] = useState('')
+
+    const handlebutton = () => {
+        setvisible(false)
+    }
+
+    const handleinput = (e : React.ChangeEvent<HTMLInputElement>) => {
+        const valor = e.target.value
+        setinputValue(valor)
+        if(valor !== '') {
+            setvisible(true)
+        }
+    }
+    
     return (
         <Container>
             <NavBar/>
@@ -48,8 +65,14 @@ export function Adicionar() {
   
                 <div className="ingredientes">
                     <div>
-                        <p>ingredientes</p>_
-                        <input type="text" />
+                        <p>ingredientes</p>
+                        <label>
+                            { visible && (
+                                <button type="button" onClick={handlebutton} id="buttonON">Adicionar +</button>
+                            )}
+
+                            <input id="inputOFF" type="text" value={inputValue} onChange={handleinput}/> 
+                        </label>
                     </div>
 
                     <div>
