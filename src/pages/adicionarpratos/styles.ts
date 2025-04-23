@@ -198,7 +198,7 @@ export const Container = styled.div`
                 line-height: 100%;
             }
 
-            > label {
+            > .lab {
                 width: 821px;
                 height: 48px;
                 padding: 4px 8px;
@@ -214,7 +214,7 @@ export const Container = styled.div`
                 position: relative;
             }
 
-            > label #buttonON {
+            > .lab button {
                 display: flex;
                 justify-content: center;
 
@@ -243,12 +243,15 @@ export const Container = styled.div`
                 color: #7C7C8A;
             }
 
-            > label #inputOFF {
+            /* > .lab #inputOFF {
                 display: none;
-            }
+            } */
 
-            > label #inputON {
-                height: 42px;
+            > .lab input {
+
+                margin: 4px 0;
+
+                height: 32px;
                 padding: 4px 8px;
 
                 color: white;
@@ -262,7 +265,7 @@ export const Container = styled.div`
                 background: #76797B;
             }
 
-            > label input:focus {
+            > .lab input:focus {
                 outline: none;
             }
           
