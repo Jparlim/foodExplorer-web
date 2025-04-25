@@ -15,8 +15,17 @@ export function Adicionar() {
 
     const handleClick = () => {
         setinputvisible(true)
-        console.log(itens)
     }
+
+    const handleinput = (e) => {
+        if(e.key === 'Enter') {
+            if(novoItem !== '') {
+                setItens([novoItem, ...itens])
+                setNovoItem('')
+                setinputvisible(false)
+            }
+        }
+    } 
 
     return (
         <Container>
@@ -62,27 +71,19 @@ export function Adicionar() {
                         <p>ingredientes</p>
                         <div className="lab">
 
-                            {/* <ul>
-                                {itens.map((item) => {
-                                    <li>{item}</li>
-                                })}
-                            </ul> */}
+                            <ul>
+                                {itens.map(item => 
+                                    <li key={item}>{item}</li>
+                                )}
+                                
+                            </ul>
 
                         { inputvisible ? (
                             <div>
                                 <input type="text" 
                                 value={novoItem}
                                 onChange={e => setNovoItem(e.target.value)}
-                                onKeyDown={e => {
-                                    if(e.key === 'Enter') {
-                                    if(novoItem !== '') {
-                                        setItens([...itens, novoItem])
-                                        setNovoItem('')
-                                        setinputvisible(false)
-
-                                        console.log(setItens)
-                                    }
-                                }}}
+                                onKeyDown={e => handleinput(e)}
                                 />
                             </div>
                             ) : (
