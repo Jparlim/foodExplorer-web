@@ -199,6 +199,8 @@ export const Container = styled.div`
             }
 
             > .lab {
+                display: flex;
+
                 width: 821px;
                 height: 48px;
                 padding: 4px 8px;
@@ -211,7 +213,44 @@ export const Container = styled.div`
                 border-radius: 8px;
                 background: var(--Dark-Dark-800, #0D161B);
 
-                position: relative;
+                /* position: relative; */
+
+                > ul {
+                    display: flex;
+                    gap: 16px;
+
+                    > li {
+                        display: flex;
+                        padding: 10px 16px;
+
+                        gap: 10px;
+                        
+                        align-items: center;
+                        list-style: none;
+
+                        width: auto;
+                        height: 32px;
+                        border-radius: 8px;
+
+                        background-color: #76797B;
+
+                        cursor: default;
+
+                        color: #FFFFFF;
+                        font-family: Roboto;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+                        vertical-align: middle;
+                        
+                        > .icon {
+                            cursor: pointer;
+
+                            color: #FFFFFF;
+                        }
+                    }
+                }
             }
 
             > .lab button {
@@ -220,7 +259,7 @@ export const Container = styled.div`
 
                 cursor: pointer;
 
-                margin:  4px auto;
+                margin: auto 0;
 
                 background-color: #0D161B;
 
@@ -231,9 +270,6 @@ export const Container = styled.div`
                 height: 32px;
                 width: 116px;
 
-                position: absolute;
-                z-index: 1;
-
                 font-family: Roboto;
                 font-weight: 400;
                 font-size: 16px;
@@ -243,13 +279,9 @@ export const Container = styled.div`
                 color: #7C7C8A;
             }
 
-            /* > .lab #inputOFF {
-                display: none;
-            } */
-
             > .lab input {
 
-                margin: 4px 0;
+                margin: auto 0;
 
                 height: 32px;
                 padding: 4px 8px;

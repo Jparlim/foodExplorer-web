@@ -6,6 +6,8 @@ import { Footer } from "../../components/footer/index"
 import { RxCaretLeft } from "react-icons/rx";
 import { FiUpload } from "react-icons/fi";
 import { useState } from "react";
+import { IconBase } from "react-icons";
+import { GrClose } from "react-icons/gr";
 
 export function Adicionar() {
 
@@ -25,7 +27,7 @@ export function Adicionar() {
                 setinputvisible(false)
             }
         }
-    } 
+    }
 
     return (
         <Container>
@@ -73,7 +75,12 @@ export function Adicionar() {
 
                             <ul>
                                 {itens.map(item => 
-                                    <li key={item}>{item}</li>
+                                    <li key={item}>{item}<GrClose onClick={() => {
+                                        setItens(itens.filter(teste => teste !== item))
+                                        // aqui estamos colocando dentro do setitens apenas
+                                        // os itens que não tem o mesmo nome ou key que o do 
+                                        // botao clicado
+                                    }} className="icon"/></li>
                                 )}
                                 
                             </ul>
