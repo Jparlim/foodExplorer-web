@@ -6,8 +6,8 @@ import { Footer } from "../../components/footer/index"
 import { RxCaretLeft } from "react-icons/rx";
 import { FiUpload } from "react-icons/fi";
 import { useState } from "react";
-import { IconBase } from "react-icons";
 import { GrClose } from "react-icons/gr";
+import { GrCheckmark } from "react-icons/gr";
 
 export function Adicionar() {
 
@@ -29,6 +29,19 @@ export function Adicionar() {
         }
     }
 
+    const [ imgsave, setimgsave ] = useState([])
+    const [ visible, setvisible ] = useState(true)
+
+    async function handleimg(img) {
+        const file = img.target.files
+
+        setimgsave([...imgsave ,file[0].name])
+        // setvisible(false)
+
+        console.log(imgsave)
+    }
+
+
     return (
         <Container>
             <NavBar/>
@@ -45,11 +58,15 @@ export function Adicionar() {
                     <div className="name">
                         <div>
                             <p>imagem do prato</p>
-                            <label className="importimg">
-                                <FiUpload className="icon"/>
-                                <p>selecionar imagem</p>
-                                <input type="file"/>
-                            </label>
+                            { visible ? (
+                                <label className="importimg">
+                                    <FiUpload className="icon"/>
+                                    <p>selecionar imagem</p>
+                                    <input type="file" onChange={e => handleimg(e)}/>
+                                </label>
+                            ) : (
+                                <GrCheckmark className="iconright"/>
+                            )}
                         </div>
 
                         <div>

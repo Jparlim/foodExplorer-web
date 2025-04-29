@@ -111,6 +111,8 @@ export const Container = styled.div`
                     border-radius: 8px;
                     background: var(--Dark-Dark-800, #0D161B);
 
+                    cursor: pointer;
+
                     > .icon{
                         width: 24px;
                         height: 24px;
@@ -121,6 +123,22 @@ export const Container = styled.div`
                         width: 0px;
                     }
                 }
+            
+                > .iconright {
+                        transform: perspective;
+                        color: green;
+
+                        display: flex;
+
+                        height: 80px;
+                        width: 229px;
+                        padding: 12px 32px;
+                        align-items: center;
+
+                        background: var(--Dark-Dark-800, #0D161B);
+                        border-radius: 8px;
+                }
+
             }
 
             > div:nth-child(2) {
@@ -366,15 +384,16 @@ export const Container = styled.div`
         }
 
         > input {
-            display: flex;
-            align-items: flex-start;
-
             height: 172px;
             padding: 14px;
 
             border-radius: 8px;
             border: none;
             background: var(--Dark-Dark-800, #0D161B);
+        }
+
+        > input::placeholder {
+            align-items: flex-end;
         }
 
         > input:focus {
