@@ -32,15 +32,28 @@ export function Adicionar() {
     const [ imgsave, setimgsave ] = useState([])
     const [ visible, setvisible ] = useState(true)
 
+
     async function handleimg(img) {
-        const file = img.target.files
+        const file = img.target.files[0].name
 
-        setimgsave([...imgsave ,file[0].name])
-        // setvisible(false)
-
-        console.log(imgsave)
+        setimgsave([file ,...imgsave])
+        setvisible(false)
     }
 
+    const namePrato = (e) => {
+        const name = e.target.value
+        // console.log(name)
+        return name
+    }
+
+    const categoria = (e) => {
+        return e
+    }
+
+    function prato() {
+        const createprato = [{'img': imgsave, 'name': namePrato, 'categoria': categoria.name, 'ingredientes': itens}]
+        console.log(createprato[0])
+    }
 
     return (
         <Container>
@@ -71,15 +84,15 @@ export function Adicionar() {
 
                         <div>
                             <p>nome</p>
-                            <input type="text" placeholder="EX: Salada Ceasar"/>
+                            <input type="text" onChange={e => namePrato(e)} placeholder="EX: Salada Ceasar"/>
                         </div>
 
                         <div>
                             <p>categoria</p>
-                            <select name="categoria" id="Cat01">
+                            <select name="categoria" id="Cat01" onChange={e => categoria(e.target.value)}>
                                 <option value="Refeição">Refeição</option>
                                 <option value="Breakfast">Breakfast</option>
-                                <option value="Refeição">Refeição</option>
+                                <option value="Cafe da tarde">Cafe da tarde</option>
                             </select>
                         </div>
                     </div>
@@ -125,7 +138,7 @@ export function Adicionar() {
                 <div className="descrição">
                     <p>descrição</p>
                     <input type="text" placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"/>
-                    <button type="button">salvar alteração</button>
+                    <button type="button" onClick={prato}>salvar alteração</button>
                 </div>
 
             </main>
