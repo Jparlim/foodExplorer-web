@@ -87,6 +87,10 @@ export const Container = styled.div`
                     line-height: 100%;
                 }
 
+                > input {
+                    color: white;
+                }
+
                 > input:focus {
                     outline: none;
                     color: white;
@@ -345,10 +349,19 @@ export const Container = styled.div`
                 align-items: center;
                 height: 48px;
 
+                color: white;
+                
                 border-radius: 8px;
                 border: none;
                 background: var(--Dark-Dark-800, #0D161B);
             }
+
+            > input[type="number"]::-webkit-inner-spin-button,
+            input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            }
+             
 
             > input::placeholder {
                 color: var(--Light-Light-500, #7C7C8A);
@@ -386,6 +399,8 @@ export const Container = styled.div`
         > input {
             height: 172px;
             padding: 14px;
+
+            color: white;
 
             border-radius: 8px;
             border: none;

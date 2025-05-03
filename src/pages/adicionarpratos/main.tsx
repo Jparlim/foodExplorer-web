@@ -29,14 +29,14 @@ export function Adicionar() {
         }
     }
 
-    const [ imgsave, setimgsave ] = useState([])
+    const [ imgsave, setimgsave ] = useState("")
     const [ visible, setvisible ] = useState(true)
 
 
     async function handleimg(img: React.ChangeEvent<HTMLInputElement>) {
-        const file = img.target.files?.[0]?.name
+        const file = img.target.files?.item(0)?.name
 
-        setimgsave([file ,...imgsave])
+        setimgsave(file ?? "")
         setvisible(false)
     }
 
@@ -53,11 +53,17 @@ export function Adicionar() {
     }
 
     const handlevalor = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setvalor(e.target.value)
+        setvalor(Number(e.target.value))
+    }
+
+    const [ description, setdescription ] = useState("")
+
+    const handledescription = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setdescription(e.target.value)
     }
 
     function prato() {
-        const createprato = [{'img': imgsave, 'name': name, 'categoria': categoria, 'ingredientes': itens, 'valor': valor}]
+        const createprato = [{'img': imgsave, 'name': name, 'categoria': categoria, 'ingredientes': itens, 'valor': valor, "descrição": description}]
         console.log(createprato[0])
     }
 
@@ -143,7 +149,7 @@ export function Adicionar() {
 
                 <div className="descrição">
                     <p>descrição</p>
-                    <input type="text" placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"/>
+                    <input type="text" onChange={e => handledescription(e)} placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"/>
                     <button type="button" onClick={prato}>salvar alteração</button>
                 </div>
 
