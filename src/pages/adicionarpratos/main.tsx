@@ -42,7 +42,7 @@ export function Adicionar() {
 
     const [ name, setname] = useState('')
     const [ categoria, setcategoria ] = useState('')
-    const [ valor, setvalor ] = useState(0)
+    const [ valor, setvalor ] = useState("")
 
     const handlepratoname = (name: React.ChangeEvent<HTMLInputElement>) => {
         setname(name.target.value)
@@ -54,10 +54,12 @@ export function Adicionar() {
 
 
     const handlevalor = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const test = Number(e.target.value)
+        const test = e.target.value.replace(/\D/g, '')
+        
+        const formatted = test.replace(/(\d)(\d{2})$/, '$1,$2')
 
-        console.log(test)
-        setvalor(Number(test))
+        console.log(valor)
+        setvalor(formatted)
     }
 
 
@@ -148,7 +150,7 @@ export function Adicionar() {
 
                     <div>
                         <p>preço</p>
-                        <input type="number" value={valor} onChange={e => handlevalor(e)} placeholder="R$ 00,00"/>
+                        <input type="text" value={valor} onChange={e => handlevalor(e)} placeholder="R$ 00,00"/>
                     </div>
                 </div>
 
