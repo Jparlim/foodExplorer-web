@@ -52,9 +52,14 @@ export function Adicionar() {
         setcategoria(categoria.target.value)
     }
 
+
     const handlevalor = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setvalor(Number(e.target.value))
+        const test = Number(e.target.value)
+
+        console.log(test)
+        setvalor(Number(test))
     }
+
 
     const [ description, setdescription ] = useState("")
 
@@ -143,7 +148,7 @@ export function Adicionar() {
 
                     <div>
                         <p>preço</p>
-                        <input type="number" onChange={e => handlevalor(e)} placeholder="R$ 00,00"/>
+                        <input type="number" value={valor} onChange={e => handlevalor(e)} placeholder="R$ 00,00"/>
                     </div>
                 </div>
 
