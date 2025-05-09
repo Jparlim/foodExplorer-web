@@ -58,7 +58,6 @@ export function Adicionar() {
         
         const formatted = test.replace(/(\d)(\d{2})$/, '$1,$2')
 
-        console.log(valor)
         setvalor(formatted)
     }
 

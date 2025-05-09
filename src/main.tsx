@@ -11,10 +11,12 @@ import { HomeADM } from "./pages/homeADM/main.tsx"
 
 import { DescriptionADM } from "./pages/descriptionsADM/main.tsx"
 
+import { Pagamento } from './pages/pagepagamento/index.tsx'
+
 import { Adicionar } from "./pages/adicionarpratos/main.tsx"
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Adicionar/>
+    <Pagamento/>
   </StrictMode>
 )

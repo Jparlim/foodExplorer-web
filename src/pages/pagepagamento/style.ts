@@ -1,75 +1,69 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-    margin: 0;
-    box-sizing: border-box;
+export const Container = styled.body`
+    display: grid;
 
-    background-color: #00111A;
-    display: flex;
-
-    justify-content: center;
-
-    > .div2 {
+    > .navPag {
         display: flex;
-        justify-content: space-between;
+
         align-items: center;
+        justify-content: center;
 
-        color: white;
+        width: 1368;
+        height: 104;
+        padding-top: 24px;
+        padding-right: 123px;
+        padding-bottom: 24px;
+        padding-left: 123px;
+        gap: 24px;
 
-        min-height: 104px;
-        min-width: 1368px;
-        
-        gap: 32px;
+        background-color: #00111A;
 
-        > .food {
+        > .foodexplorer {
             display: flex;
-            align-items: center;
-            
-            /* width: 810px; */
-            width: 100%;
-            height: 48px;
-            
-            gap: 32px;
 
-            position: relative;
+            width: 197px;
+            height: 30px;
 
-            > div {
-                display: flex;
+            gap: 10px;
 
-                width: 197px;
+            > .icon {
+                width: 30px;
                 height: 30px;
 
-                gap: 10px;
-
-                > .icon {
-                    width: 30px;
-                    height: 30px;
-
-                    color: #065E7C;
-                }
-
-           
-
-                > p{
-                    display: flex;
-
-                    font-weight: 700;
-                    font-size: 24px;
-                    font-family: Roboto/bigger bold;
-                    line-height: 28.13px;
-
-                    white-space: nowrap;
-                }
+                color: #065E7C;
             }
 
+            > p{
+                display: flex;
+                color: white;
+
+                font-weight: 700;
+                font-size: 24px;
+                font-family: Roboto/bigger bold;
+                line-height: 28.13px;
+
+                white-space: nowrap;
+            }
+        }
+
+        > div {
+            border: 1px solid red;
+            position: relative;
+        
             > .search {
                 width: 24px;
                 height: 24px;
 
+                color: #C4C4CC;
+
                 display: flex;
                 justify-content: center;
+                align-items: center;
 
-                left: 224px;
+                top: 10px;
+                left: 10px;
+
                 position: absolute;
             }
 
@@ -82,8 +76,8 @@ export const Container = styled.div`
 
                 border-radius: 5px;
 
-                /* width: 581px; */
-                width: 100%;
+                    /* width: 581px; */
+                width: 300px;
                 height: 48px;
 
                 padding: 12px 14px 12px 50px;
@@ -94,18 +88,18 @@ export const Container = styled.div`
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 16px;
-           }
+            }
 
-           > input::placeholder {
+            > input::placeholder {
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 16px;
 
                 font-family: Roboto/small regular;
                 color: #7C7C8A;
-           }
+            }
 
-           > input:focus {
+            > input:focus {
                 color: white
             }
         }
@@ -164,8 +158,9 @@ export const Container = styled.div`
             height: 32px;
 
             margin-left: 10px;
-
-            color: #FFFFFF;
+            color: white;
         }
     }
+    
+    
 `
