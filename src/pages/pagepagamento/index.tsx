@@ -7,6 +7,7 @@ import { CiSearch } from "react-icons/ci";
 import { PiReceiptLight } from "react-icons/pi";
 import { GoSignOut } from "react-icons/go";
 
+import saladaRavanel from '../../images/saladaRavanel.png'
 
 export function Pagamento() {
     return (
@@ -34,7 +35,32 @@ export function Pagamento() {
             </div>
             
             <div className='pagamento'>
-                <p>teste</p>
+                <div className='meupedidos'>
+                    <h1>Meus pedidos</h1>
+                    <ul>
+                        <li>
+                            <img src={saladaRavanel} alt='' />
+                            <p>1X salada Ravanel</p>
+                            {/* <p>{}x {}</p> */}
+                            {/* <p>{}</p> */}
+                            <p className='price'>25,97</p>
+                            <button type='button'>
+                                excluir
+                            </button>
+                        </li>
+                    </ul>
+                    {/* <p>Total: R${}</p> */}
+                    <p>Total: R$103,88</p>
+                </div>
+                
+                <div>
+                    <h1>Pagamento</h1>
+                    <div>
+                        <button type='button'>pix</button>
+                        <button type='button'>crédito</button>
+
+                    </div>
+                </div>
             </div>
 
             <Footer/>

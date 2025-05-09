@@ -48,7 +48,6 @@ export const Container = styled.body`
         }
 
         > div {
-            border: 1px solid red;
             position: relative;
         
             > .search {
@@ -102,6 +101,26 @@ export const Container = styled.body`
             > input:focus {
                 color: white
             }
+        }
+
+        > a {
+            text-decoration: none;
+            color: #E1E1E6;
+
+            font-family: Roboto;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            vertical-align: middle;
+
+            width: 108;
+            height: 16;
+            top: 16px;
+            left: 561px;
+
+
         }
 
         > button:first-of-type {
@@ -162,5 +181,107 @@ export const Container = styled.body`
         }
     }
     
-    
+    > .pagamento {
+        grid: 1;
+        height: 100vh;
+
+        display: flex;
+        gap: 150px;
+
+        justify-content: space-around;
+
+        > .meupedidos {
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+            color: white;
+
+            > h1 {
+                width: 191;
+                height: 45;
+
+                margin-top: 138px;
+
+                font-family: Poppins;
+                font-weight: 500;
+                font-size: 32px;
+                line-height: 140%;
+                letter-spacing: 0%;
+            }
+
+            > ul {
+                display: flex;
+                flex-direction: column;
+
+                width: 444px;
+                height: 480px;
+                top: 215px;
+                left: 123px;
+
+                border: 1px solid red;
+
+                > li {
+                    display: flex;
+
+                    width: 403px;
+                    height: 104px;
+                    gap: 13px;
+                    padding-top: 16px;
+                    padding-bottom: 16px;
+
+                    align-items: center;
+
+                    position: relative;
+
+                    border: 1px solid blue;
+
+                    > img {
+                        width: 72px;
+                        height: 72px;
+                        top: 16px;
+                    }
+
+                    > p {
+                        font-family: Poppins;
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 160%;
+                        letter-spacing: 0%;
+
+                        margin-bottom: 20px;
+                    }
+
+                    > .price {
+                        font-family: Roboto;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 160%;
+                        letter-spacing: 0%;
+
+                    }
+
+                    > button {
+                        width: 36;
+                        height: 19;
+                        top: 58.5px;
+                        left: 85px;
+                        gap: 10px;
+
+                        font-family: Roboto;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 160%;
+                        letter-spacing: 0%;
+
+                        color: #AB4D55;
+                        background: none;
+                        border: none;
+
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
 `
