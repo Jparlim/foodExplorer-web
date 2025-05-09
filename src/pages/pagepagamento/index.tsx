@@ -6,8 +6,11 @@ import { BiSolidPolygon } from "react-icons/bi"
 import { CiSearch } from "react-icons/ci";
 import { PiReceiptLight } from "react-icons/pi";
 import { GoSignOut } from "react-icons/go";
+import { FaPix } from "react-icons/fa6";
+import { CiCreditCard1 } from "react-icons/ci";
 
 import saladaRavanel from '../../images/saladaRavanel.png'
+import elements from '../../images/elements.png'
 
 export function Pagamento() {
     return (
@@ -53,12 +56,14 @@ export function Pagamento() {
                     <p>Total: R$103,88</p>
                 </div>
                 
-                <div>
+                <div className='pag'>
                     <h1>Pagamento</h1>
-                    <div>
-                        <button type='button'>pix</button>
-                        <button type='button'>crédito</button>
-
+                    <div className='tableofthepag'>  
+                        <div>
+                            <button type='submit'><FaPix className='icon'/>Pix</button>
+                            <button type='button'><CiCreditCard1 className='icon'/>Cartão</button>
+                        </div>
+                        <img src={elements} alt="" />
                     </div>
                 </div>
             </div>

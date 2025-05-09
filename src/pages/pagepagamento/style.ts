@@ -188,7 +188,7 @@ export const Container = styled.body`
         display: flex;
         gap: 150px;
 
-        justify-content: space-around;
+        justify-content: space-evenly;
 
         > .meupedidos {
             display: flex;
@@ -201,7 +201,7 @@ export const Container = styled.body`
                 width: 191;
                 height: 45;
 
-                margin-top: 138px;
+                margin: 120px 0 40px 0;
 
                 font-family: Poppins;
                 font-weight: 500;
@@ -215,11 +215,7 @@ export const Container = styled.body`
                 flex-direction: column;
 
                 width: 444px;
-                height: 480px;
-                top: 215px;
-                left: 123px;
-
-                border: 1px solid red;
+                min-height: 104px;
 
                 > li {
                     display: flex;
@@ -233,8 +229,6 @@ export const Container = styled.body`
                     align-items: center;
 
                     position: relative;
-
-                    border: 1px solid blue;
 
                     > img {
                         width: 72px;
@@ -278,10 +272,106 @@ export const Container = styled.body`
                         background: none;
                         border: none;
 
+                        cursor: pointer;
+
                         position: absolute;
                     }
                 }
             }
+
+            > p {
+                font-family: Poppins;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 160%;
+                letter-spacing: 0%;
+
+            }
+        }
+
+        > .pag {
+            display: flex;
+            flex-direction: column;
+
+            color: white;
+    
+            > h1 {
+                width: 191px;
+                height: 45px;
+                top: 138px;
+                left: 642px;
+    
+                margin: 120px 0 40px 0;
+
+                font-family: Poppins;
+                font-weight: 500;
+                font-size: 32px;
+                line-height: 140%;
+                letter-spacing: 0%;
+            }
+
+            > .tableofthepag {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                
+
+                width: 530px;
+                height: 445px;
+
+                border: 1px solid #76797B;
+
+                > div { 
+                    display: flex;
+                    justify-content: space-around;
+                    width: 530px;
+                    height: 81px;
+
+                    > button {
+                        width: 265px;
+                        height: 81px;
+
+                        border-top-left-radius: 8px;
+                        gap: 8px;
+  
+                        border-top-width: 1px;
+                        border-left-width: 1px;
+  
+                        padding-top: 12px;
+                        padding-right: 14px;
+                        padding-bottom: 12px;
+                        padding-left: 14px;
+
+                        cursor: pointer;
+
+                        background: none;
+                        border: none;
+                        color: white;
+
+                        border: 1px solid #76797B;
+
+                        justify-content: center;
+                        align-items: center;
+                        display: flex;
+
+                        > .icon {
+                            width: 24px;
+                            height: 18px;
+                        }
+                    }
+                }
+
+                > img {
+                    margin: auto;
+
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+
+            
         }
     }
+
 `
