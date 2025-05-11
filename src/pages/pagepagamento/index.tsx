@@ -11,8 +11,12 @@ import { CiCreditCard1 } from "react-icons/ci";
 
 import saladaRavanel from '../../images/saladaRavanel.png'
 import elements from '../../images/elements.png'
+import { useState } from 'react';
 
 export function Pagamento() {
+
+    const [ visible, setvisible ] = useState(false)
+
     return (
         <Container>
             <div className='navPag'>
@@ -63,10 +67,31 @@ export function Pagamento() {
                             <button type='submit'><FaPix className='icon'/>Pix</button>
                             <button type='button'><CiCreditCard1 className='icon'/>Cartão</button>
                         </div>
-                        <img src={elements} alt="" />
+                        { visible ? (
+                            <img src={elements} alt="" />
+                        ) : (
+                        <div className='credito'>
+                            <div>
+                                <p>Número do cartão</p>
+                                <input type="text" placeholder='0000 0000 0000 0000'/>
+                            </div>
+                            <div>
+                                <div>
+                                    <p>Validade</p>
+                                    <input type='text' placeholder='00/00'/>
+                                </div>
+                                <div>
+                                    <p>CVC</p>
+                                    <input type='number' placeholder='000'/>
+                                </div>
+                            </div>
+                            <button type='button'>Finalizar Pagamento</button>
+                        </div>
+                        )}
                     </div>
                 </div>
             </div>
+
 
             <Footer/>
         </Container>

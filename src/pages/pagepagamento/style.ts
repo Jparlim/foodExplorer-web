@@ -183,7 +183,7 @@ export const Container = styled.body`
     
     > .pagamento {
         grid: 1;
-        height: 100vh;
+        height: 81.7vh;
 
         display: flex;
         gap: 150px;
@@ -322,7 +322,7 @@ export const Container = styled.body`
 
                 border: 1px solid #76797B;
 
-                > div { 
+                > div:nth-child(1) { 
                     display: flex;
                     justify-content: space-around;
                     width: 530px;
@@ -359,6 +359,121 @@ export const Container = styled.body`
                             width: 24px;
                             height: 18px;
                         }
+                    }
+                }
+
+                > .credito {
+                    display: flex;
+                    flex-direction: column;
+
+                    margin: auto;
+
+                    width: 348px;
+                    height: 274px;
+
+                    gap: 37px;
+
+                    > div:nth-child(1) {
+                        display: flex;
+                        flex-direction: column;
+
+                        width: 348px;
+                        height: 72px;
+                        gap: 8px;
+
+                        > p {
+                            font-family: Roboto;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 100%;
+                            letter-spacing: 0%;
+                        }
+
+                        > input {
+                            width: 348px;
+                            height: 48px;
+
+                            border-width: 1px;
+                            gap: 14px;
+                            
+                            border-radius: 5px;
+                            padding-top: 12px;
+                            padding-right: 14px;
+                            padding-bottom: 12px;
+                            padding-left: 14px;
+
+                            background: none;
+                            border: 1px solid #FFFFFF;
+                            color: white;
+                        }
+                    }
+
+                    > div:nth-child(2) {
+                        display: flex;
+
+                        gap: 17px;
+
+                        > div {
+                            display: flex;
+                            flex-direction: column;
+
+                            width: 166px;
+                            height: 72px;
+                            gap: 8px;
+
+                            > p {
+                                font-family: Roboto;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 100%;
+                                letter-spacing: 0%;
+                            }
+
+                            > input {
+                                width: 166px;
+                                height: 48px;
+                                border-width: 1px;
+                                gap: 14px;
+                                border-radius: 5px;
+                                padding-top: 12px;
+                                padding-right: 14px;
+                                padding-bottom: 12px;
+                                padding-left: 14px;
+
+                                background: none ;
+                                border: 1px solid #FFFFFF;
+                            }
+                        }
+                    }
+
+                    > button {
+                        width: 348px;
+                        height: 56px;
+
+                        opacity: 0.8;
+                        gap: 8px;
+                        
+                        border-radius: 5px;
+                        padding-top: 12px;
+                        padding-right: 32px;
+                        padding-bottom: 12px;
+                        padding-left: 32px;
+
+                        border: none;
+                        background-color: #750310;
+                        
+                        color: white;
+                        font-family: Poppins;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 24px;
+                        letter-spacing: 0%;
+                        text-align: center;
+                        vertical-align: middle;
+
+                        cursor: pointer;
+                        
+
                     }
                 }
 
