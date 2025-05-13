@@ -15,7 +15,13 @@ import { useState } from 'react';
 
 export function Pagamento() {
 
-    const [ visible, setvisible ] = useState(false)
+    const [ visible, setvisible ] = useState(true)
+
+    const handlepix = () => {
+
+
+        return setvisible(false)
+    }
 
     return (
         <Container>
@@ -64,11 +70,11 @@ export function Pagamento() {
                     <h1>Pagamento</h1>
                     <div className='tableofthepag'>  
                         <div>
-                            <button type='submit'><FaPix className='icon'/>Pix</button>
+                            <button type='button' onClick={handlepix}> <FaPix className='icon'/>Pix </button>
                             <button type='button'><CiCreditCard1 className='icon'/>Cartão</button>
                         </div>
                         { visible ? (
-                            <img src={elements} alt="" />
+                            <img src={elements} alt=""/>
                         ) : (
                         <div className='credito'>
                             <div>
