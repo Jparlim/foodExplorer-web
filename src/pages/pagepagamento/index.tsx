@@ -15,13 +15,9 @@ import { useState } from 'react';
 
 export function Pagamento() {
 
-    const [ visible, setvisible ] = useState(true)
+    const [ visible, setvisible ] = useState< 'pix' | 'cartao'>('cartao')
 
-    const handlepix = () => {
-
-
-        return setvisible(false)
-    }
+    console.log(visible)
 
     return (
         <Container>
@@ -36,8 +32,8 @@ export function Pagamento() {
                     <input type="text" placeholder="Busque por pratos ou ingredientes"/>
                 </div>
                 
-                <a href="{}">Meus favoritos</a>
-                <a href="{}">Histórico de pedidos</a>
+                <a href="">Meus favoritos</a>
+                <a href="">Histórico de pedidos</a>
 
                 <button type="submit">
                     <PiReceiptLight className="receipt"/>
@@ -57,7 +53,7 @@ export function Pagamento() {
                             {/* <p>{}x {}</p> */}
                             {/* <p>{}</p> */}
                             <p className='price'>25,97</p>
-                            <button type='button'>
+                            <button>
                                 excluir
                             </button>
                         </li>
@@ -70,30 +66,40 @@ export function Pagamento() {
                     <h1>Pagamento</h1>
                     <div className='tableofthepag'>  
                         <div>
-                            <button type='button' onClick={handlepix}> <FaPix className='icon'/>Pix </button>
-                            <button type='button'><CiCreditCard1 className='icon'/>Cartão</button>
+                            <button onClick={() => setvisible('pix')} > <FaPix className='icon'/>Pix </button>
+                            <button className='oi' onClick={() => setvisible('cartao')} ><CiCreditCard1 className='icon'/>Cartão</button>
                         </div>
-                        { visible ? (
+
+                        <div>
+
+                            { visible === 'pix' && <p>texto de teste</p>}
+
+                            { visible === 'cartao' && <p>texto de cartao</p>}
+                        
+                        </div>
+
+
+                        {/* { visible === 'pix' ? (
                             <img src={elements} alt=""/>
                         ) : (
-                        <div className='credito'>
-                            <div>
-                                <p>Número do cartão</p>
-                                <input type="text" placeholder='0000 0000 0000 0000'/>
-                            </div>
-                            <div>
+                            <div className='credito'>
                                 <div>
-                                    <p>Validade</p>
-                                    <input type='text' placeholder='00/00'/>
+                                    <p>Número do cartão</p>
+                                    <input type="text" placeholder='0000 0000 0000 0000'/>
                                 </div>
                                 <div>
-                                    <p>CVC</p>
-                                    <input type='number' placeholder='000'/>
+                                    <div>
+                                        <p>Validade</p>
+                                        <input type='text' placeholder='00/00'/>
+                                    </div>
+                                    <div>
+                                        <p>CVC</p>
+                                        <input type='number' placeholder='000'/>
+                                    </div>
                                 </div>
+                                <button type='button'>Finalizar Pagamento</button>
                             </div>
-                            <button type='button'>Finalizar Pagamento</button>
-                        </div>
-                        )}
+                        )} */}
                     </div>
                 </div>
             </div>

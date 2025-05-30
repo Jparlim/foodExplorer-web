@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.body`
+export const Container = styled.div`
     display: grid;
 
     > .navPag {
@@ -315,12 +315,17 @@ export const Container = styled.body`
                 flex-direction: column;
                 align-items: center;
 
-                
-
                 width: 530px;
                 height: 445px;
 
-                border: 1px solid #76797B;
+                width: 530;
+
+                border-bottom: 1px solid #76797B;
+                border-left: 1px solid #76797B;
+                border-right: 1px solid #76797B;
+
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
 
                 > div:nth-child(1) { 
                     display: flex;
@@ -334,14 +339,6 @@ export const Container = styled.body`
 
                         border-top-left-radius: 8px;
                         gap: 8px;
-  
-                        border-top-width: 1px;
-                        border-left-width: 1px;
-  
-                        padding-top: 12px;
-                        padding-right: 14px;
-                        padding-bottom: 12px;
-                        padding-left: 14px;
 
                         cursor: pointer;
 
@@ -359,6 +356,37 @@ export const Container = styled.body`
                             width: 24px;
                             height: 18px;
                         }
+                    }
+
+                    > .oi {
+                        width: 265px;
+                        height: 81px;
+
+                        gap: 8px;
+                        
+                        cursor: pointer;
+                        
+                        background: none;
+                        border: none;
+                        color: white;
+                        
+                        border-top-right-radius: 8px;
+                        border-top-left-radius: 0;
+
+                        border: 1px solid #76797B;
+
+                        justify-content: center;
+                        align-items: center;
+                        display: flex;
+
+                        > .icon {
+                            width: 24px;
+                            height: 18px;
+                        }
+                    }
+
+                    > button:active {
+                        background-color: #750310;
                     }
                 }
 
@@ -442,6 +470,8 @@ export const Container = styled.body`
 
                                 background: none ;
                                 border: 1px solid #FFFFFF;
+
+                                color: white;
                             }
                         }
                     }
