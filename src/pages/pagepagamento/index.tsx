@@ -17,7 +17,6 @@ export function Pagamento() {
 
     const [ visible, setvisible ] = useState< 'pix' | 'cartao'>('cartao')
 
-    console.log(visible)
 
     return (
         <Container>
@@ -47,8 +46,9 @@ export function Pagamento() {
                 <div className='meupedidos'>
                     <h1>Meus pedidos</h1>
                     <ul>
+
                         <li>
-                            <img src={saladaRavanel} alt='' />
+                            <img src={saladaRavanel} alt=''/>
                             <p>1X salada Ravanel</p>
                             {/* <p>{}x {}</p> */}
                             {/* <p>{}</p> */}
@@ -57,6 +57,7 @@ export function Pagamento() {
                                 excluir
                             </button>
                         </li>
+                    
                     </ul>
                     {/* <p>Total: R${}</p> */}
                     <p>Total: R$103,88</p>
@@ -69,15 +70,6 @@ export function Pagamento() {
                             <button onClick={() => setvisible('pix')} > <FaPix className='icon'/>Pix </button>
                             <button className='oi' onClick={() => setvisible('cartao')} ><CiCreditCard1 className='icon'/>Cartão</button>
                         </div>
-{/* 
-                        <div>
-
-                            { visible === 'pix' && <p>texto de teste</p>}
-
-                            { visible === 'cartao' && <p>texto de cartao</p>}
-                        
-                        </div> */}
-
 
                         { visible === 'pix' ? (
                             <img src={elements} alt=""/>

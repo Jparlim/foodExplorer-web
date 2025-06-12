@@ -23,7 +23,7 @@ export function NavBar() {
                     <p>pedidos (0)</p>
                 </button>
 
-                <GoSignOut className="signOut"/>
+                <GoSignOut className="signOut">{}</GoSignOut>
             </div>
         </Container>
     )
