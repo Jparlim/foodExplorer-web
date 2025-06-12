@@ -69,17 +69,17 @@ export function Pagamento() {
                             <button onClick={() => setvisible('pix')} > <FaPix className='icon'/>Pix </button>
                             <button className='oi' onClick={() => setvisible('cartao')} ><CiCreditCard1 className='icon'/>Cartão</button>
                         </div>
-
+{/* 
                         <div>
 
                             { visible === 'pix' && <p>texto de teste</p>}
 
                             { visible === 'cartao' && <p>texto de cartao</p>}
                         
-                        </div>
+                        </div> */}
 
 
-                        {/* { visible === 'pix' ? (
+                        { visible === 'pix' ? (
                             <img src={elements} alt=""/>
                         ) : (
                             <div className='credito'>
@@ -99,7 +99,7 @@ export function Pagamento() {
                                 </div>
                                 <button type='button'>Finalizar Pagamento</button>
                             </div>
-                        )} */}
+                        )}
                     </div>
                 </div>
             </div>
