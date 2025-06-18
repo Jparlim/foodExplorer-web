@@ -2,6 +2,7 @@ import { Container } from "./style";
 import { Refeiç, Pratos } from "../refeições/index"
 import { RxCaretLeft } from "react-icons/rx";
 import { RxCaretRight } from "react-icons/rx";
+import { useState } from "react";
 
 export function BoxRefeições() {
     const refeicoes = Pratos.filter(prato => prato.categoria === "refeições");

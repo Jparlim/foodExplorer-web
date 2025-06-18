@@ -21,8 +21,6 @@ export const Container = styled.div`
 
     > .oi {
         display: grid;
-        grid-template-areas: "cabeçalho" "cabeçalho" "cabeçalho" "cabeçalho"
-        "cell" "cell" "cell" "cell";
 
         grid-template-columns: 151px 151px 676px 151px;
         grid-template-rows: 64px 64px 64px 64px;
@@ -32,16 +30,14 @@ export const Container = styled.div`
 
         width: 1132px;
 
-        border: 1px solid orange;
-
         font-family: Roboto;
 
         > .header {
             display: grid;
             align-items: center;
 
-            border: 1px solid red;
-            padding-left: 10px;
+            border: 2px solid #192227;
+            padding-left: 25px;
 
             font-weight: 700;
             font-size: 14px;
@@ -50,12 +46,13 @@ export const Container = styled.div`
             vertical-align: middle;
         }
 
-         > .cell {
-            display: grid;
+         > div {
+            display: flex;
+            gap: 10px;
             align-items: center;
 
-            border: 1px solid red;
-            padding-left: 10px;
+            border: 2px solid #192227;
+            padding-left: 25px;
 
             font-family: Roboto;
             font-weight: 400;
@@ -64,6 +61,11 @@ export const Container = styled.div`
             letter-spacing: 0%;
             vertical-align: middle;
 
+            > .icon {
+                width: 8;
+                height: 8;
+                color: red;
+            }
         }
     }
 `

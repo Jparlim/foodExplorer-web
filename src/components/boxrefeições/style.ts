@@ -42,6 +42,8 @@ export const Container = styled.div`
             height: 462px;
             flex-shrink: 0;
 
+            cursor: pointer;
+
             background: linear-gradient( 270deg, rgba(0, 10, 15, 0.47) 0%, #000A0F 100%);
             
             left: 0;
@@ -67,6 +69,8 @@ export const Container = styled.div`
             width: 224px;
             height: 465px;
             flex-shrink: 0;
+
+            cursor: pointer;
 
             background: linear-gradient( 90deg, rgba(0, 10, 15, 0.47) 0%, #000A0F 100%);
 

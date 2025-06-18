@@ -70,7 +70,6 @@ export function Adicionar() {
 
     function prato() {
         const createprato = [{'img': imgsave, 'name': name, 'categoria': categoria, 'ingredientes': itens, 'valor': valor, "descrição": description}]
-        console.log(createprato[0])
     }
 
     return (
