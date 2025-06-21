@@ -2,7 +2,7 @@ import { Container } from "./styles";
 import { BiSolidPolygon } from "react-icons/bi"
 import { CiSearch } from "react-icons/ci";
 import { PiReceiptLight } from "react-icons/pi";
-import { GoSignOut } from "react-icons/go";
+import { GoSignOut } from "react-icons/go";""
 
 export function NavBar() {
     return (
@@ -23,7 +23,9 @@ export function NavBar() {
                     <p>pedidos (0)</p>
                 </button>
 
-                <GoSignOut className="signOut">{}</GoSignOut>
+                <GoSignOut className="signOut">
+                    {}
+                </GoSignOut>
             </div>
         </Container>
     )

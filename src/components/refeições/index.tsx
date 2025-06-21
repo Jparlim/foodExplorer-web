@@ -54,8 +54,22 @@ export function Refeiç( { id, title, imagem, subtitle, value }:pratosRequest ) 
         }
     }
 
-    const [ banco, setbanco ] = useState({})
-    
+    const [ newitem, setnewitem ] = useState({})
+    const [ banco, setbanco ] = useState<object>([])
+
+    const dadosdepratos = () => {
+
+        setnewitem({
+            'id': id,
+            'img': imagem,
+            'name': title,
+            'valor': value,
+            'quantidade': contador
+        })
+
+        setbanco([newitem, ...banco])
+    }
+
     return (
         <Container>
             <CiHeart className={`icon ${favorito ? "favorito" : ""}`} key={id} onClick={toglefavorite}/>
@@ -72,15 +86,7 @@ export function Refeiç( { id, title, imagem, subtitle, value }:pratosRequest ) 
                     <FaPlus className="maisEmenos" onClick={aumentarnúmero}/>
                 </div>
 
-                <button onClick={() => {
-                    if(contador === 0) {
-                        return console.log("adicione ao menos uma porção do alimento")
-                    }
-                    setbanco([{"id":id,
-                        "name": title,
-                        "quantidade":contador
-                    }, banco])
-                }}>incluir</button>
+                <button onClick={() => dadosdepratos()}>incluir</button>
 
                 <button onClick={() => console.log(banco)}>teste</button>
             </div>
